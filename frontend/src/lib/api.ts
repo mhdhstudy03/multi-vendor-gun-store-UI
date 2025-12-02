@@ -18,7 +18,6 @@ export interface Vendor {
 export async function fetchProducts(): Promise<Product[]> {
   try {
     const res = await fetch(`${API_URL}/products`, {
-      next: { revalidate: 0 },
       cache: "no-store",
     });
     if (!res.ok) {
@@ -34,7 +33,6 @@ export async function fetchProducts(): Promise<Product[]> {
 export async function fetchVendors(): Promise<Vendor[]> {
   try {
     const res = await fetch(`${API_URL}/vendors`, {
-      next: { revalidate: 0 },
       cache: "no-store",
     });
     if (!res.ok) {

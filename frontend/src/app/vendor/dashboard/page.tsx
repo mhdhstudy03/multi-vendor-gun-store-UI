@@ -26,9 +26,11 @@ export default async function VendorDashboardPage() {
         description="Track listings, fulfillment speed, and network health from a single tactical dashboard. Data below uses the public demo API."
         actions={
           <>
-            <Button className="bg-lime-400 text-black hover:bg-lime-300">
-              Create new listing
-            </Button>
+            <a href="/vendor/upload">
+              <Button className="bg-lime-400 text-black hover:bg-lime-300">
+                Create new listing
+              </Button>
+            </a>
             <Button variant="outline" className="border-white/30 text-white">
               Invite team member
             </Button>
